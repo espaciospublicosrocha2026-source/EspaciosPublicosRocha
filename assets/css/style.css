@@ -171,8 +171,14 @@ body {
 
 .dashboard-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    justify-content: center;
     gap: 20px;
+}
+.dashboard-card {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
 }
 
 /* TABLET */
@@ -221,4 +227,71 @@ body {
 
 .dashboard-card:hover {
     transform: translateY(-5px);
+}
+/* LOGO EN MENU MOBILE */
+.menu-logo {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.menu-logo img {
+    width: 120px;
+    opacity: 0.8;
+}
+@media (max-width: 768px) {
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background: white;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* 👈 clave */
+
+        padding: 20px;
+        transition: 0.3s;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* LOGO */
+    .menu-logo {
+        text-align: center;
+    }
+
+    .menu-logo img {
+        width: 120px;
+        opacity: 0.8;
+    }
+}
+.menu-logo img {
+    transition: 0.3s;
+}
+
+.menu.active .menu-logo img {
+    transform: scale(1.05);
+}
+@media (max-width: 768px) {
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .menu ul {
+        margin-bottom: 20px;
+    }
 }
