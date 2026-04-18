@@ -21,17 +21,22 @@ toggle.addEventListener("click", () => {
     toggle.classList.toggle("active");
 });
 </script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const toggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
+    const overlay = document.getElementById("overlay");
 
-    if (toggle && menu) {
-        toggle.addEventListener("click", () => {
-            menu.classList.toggle("active");
-            toggle.classList.toggle("active");
-        });
-    }
+    toggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
+
+    overlay.addEventListener("click", () => {
+        menu.classList.remove("active");
+        overlay.classList.remove("active");
+    });
 });
 </script>
 
@@ -66,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     </nav>
 
 </header>
+
 
 <!-- CAROUSEL -->
 <div class="container-fluid p-0">
