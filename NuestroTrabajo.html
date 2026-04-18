@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Nuestro Trabajo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR (el mismo que ya tenés) -->
+<header class="top-navbar">
+
+    <div class="logo">
+        <img src="assets/img/Logo.png" alt="Logo">
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="menu" id="menu">
+        <ul>
+             <li><a href="index.html">🏠 Inicio</a></li>
+
+            <li><a href="NuestroTrabajo.html"><span>📊 Trabajo</span></a></li>
+            <li><a href="SolisitudesReclamos.html"><span>📩 Reclamos</span></a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- ===== SECCIÓN TRABAJO ===== -->
+<section class="trabajo">
+
+    <h1 class="titulo">Nuestro Trabajo</h1>
+
+    <!-- BLOQUE 1 -->
+    <div class="trabajo-item">
+        <img src="assets/img/trabajo1.jpg" alt="Trabajo 1">
+
+        <div class="trabajo-texto">
+            <h2>Mantenimiento de Espacios Verdes</h2>
+            <p>
+                Se realizaron tareas de mantenimiento en plazas y espacios públicos,
+                incluyendo corte de césped, limpieza y acondicionamiento general.
+            </p>
+        </div>
+    </div>
+
+    <!-- BLOQUE 2 -->
+    <div class="trabajo-item reverse">
+        <img src="assets/img/trabajo2.jpg" alt="Trabajo 2">
+
+        <div class="trabajo-texto">
+            <h2>Control de Palmeras</h2>
+            <p>
+                Monitoreo sanitario y tratamiento de palmeras afectadas por plagas,
+                garantizando su conservación y seguridad.
+            </p>
+        </div>
+    </div>
+
+    <!-- BLOQUE 3 -->
+    <div class="trabajo-item">
+        <img src="assets/img/trabajo3.jpg" alt="Trabajo 3">
+
+        <div class="trabajo-texto">
+            <h2>Producción en Vivero</h2>
+            <p>
+                Producción y cuidado de especies vegetales destinadas a la mejora
+                de los espacios públicos del departamento.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+<!-- FOOTER SIMPLE -->
+<footer>
+    <h3>Contacto</h3>
+    <p>📍 Dirección</p>
+    <p>📞 Teléfono</p>
+    <p>📧 Email</p>
+</footer>
+
+<!-- JS MENU -->
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    menu.classList.toggle("active");
+});
+
+document.querySelectorAll(".dropdown > a").forEach(item => {
+    item.addEventListener("click", function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            this.parentElement.classList.toggle("active");
+        }
+    });
+});
+</script>
+
+</body>
+</html>
