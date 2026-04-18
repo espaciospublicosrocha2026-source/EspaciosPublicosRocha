@@ -2,12 +2,25 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Realizar Reclamo</title>
+    <meta charset="utf-8">
+    <title>Espacios Públicos · Intendencia Departamental de Rocha</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
 </head>
+<script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+toggle.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    toggle.classList.toggle("active");
+});
+</script>
 
 <body>
 
