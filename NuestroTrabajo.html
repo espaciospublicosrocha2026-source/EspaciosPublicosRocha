@@ -21,6 +21,19 @@ toggle.addEventListener("click", () => {
     toggle.classList.toggle("active");
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    if (toggle && menu) {
+        toggle.addEventListener("click", () => {
+            menu.classList.toggle("active");
+            toggle.classList.toggle("active");
+        });
+    }
+});
+</script>
 <body>
 
 <!-- NAVBAR (el mismo que ya tenés) -->
